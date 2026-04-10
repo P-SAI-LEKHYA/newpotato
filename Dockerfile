@@ -10,7 +10,7 @@ COPY requirements.txt ./
 # Note: we add tensorflow and pillow to requirements.txt if they aren't there, 
 # but installing explicit versions is recommended.
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir tensorflow pillow
+RUN pip install --no-cache-dir tensorflow==2.15.0 pillow
 
 # Copy the rest of the application
 COPY . .
